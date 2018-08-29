@@ -1,5 +1,5 @@
-const HtmlWebPackPlugin = require("html-webpack-plugin");
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const HtmlWebPackPlugin = require("html-webpack-plugin")
+const MiniCssExtractPlugin = require("mini-css-extract-plugin")
 module.exports = {
   module: {
     rules: [
@@ -35,4 +35,4 @@ module.exports = {
       chunkFilename: "[id].css"
     })
   ]
-};
+}

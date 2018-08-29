@@ -1,0 +1,9 @@
+{
+  "linters": {
+    "*.js": ["yarn lint", "git add"]
+  },
+  "ignore": [
+    "webpack.config.js",
+    "**/dist/*"
+  ]
+}
