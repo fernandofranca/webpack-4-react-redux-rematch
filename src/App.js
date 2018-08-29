@@ -1,7 +1,7 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
 import { Provider } from 'react-redux'
 
+// eslint-disable-next-line
 import style from './main.css'
 import Some from 'components/Some'
 import store from 'state'
@@ -21,6 +21,4 @@ const Root = () => (
   </Provider>
 )
 
-export default App
-
-ReactDOM.render(<Root />, document.getElementById('app'))
+export default Root

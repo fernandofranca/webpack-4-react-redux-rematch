@@ -24,10 +24,11 @@ export default {
     incrementAsync(payload, rootState) {
       return new Promise((resolve, reject) => {
         setTimeout(() => {
+          // eslint-disable-next-line
           dispatch.stuff.increment()
           resolve()
         }, 1000)
-      });
+      })
     }
   }
 }

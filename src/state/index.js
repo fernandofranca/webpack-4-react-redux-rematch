@@ -1,6 +1,6 @@
-import { connect } from "react-redux"
-import { init } from "@rematch/core"
-import config from "./config.js"
+import { connect } from 'react-redux'
+import { init } from '@rematch/core'
+import config from './config.js'
 
 export default init(config)
 
@@ -22,7 +22,6 @@ function methodsFromModels(modelNames) {
       obj[`$${modelName}`] = {}
 
       const methodNames = Object.keys(dispatch[modelName])
-      global.dispatch = dispatch
 
       methodNames.forEach((name) => {
         obj[`$${modelName}`][name] = dispatch[modelName][name]
