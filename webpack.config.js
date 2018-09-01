@@ -1,5 +1,7 @@
+const path = require("path")
 const HtmlWebPackPlugin = require("html-webpack-plugin")
 const MiniCssExtractPlugin = require("mini-css-extract-plugin")
+
 module.exports = {
   module: {
     rules: [
@@ -31,8 +33,12 @@ module.exports = {
       filename: "./index.html"
     }),
     new MiniCssExtractPlugin({
-      filename: "[name].css",
+      filename: "[name].[contenthash].css",
       chunkFilename: "[id].css"
     })
-  ]
+  ],
+  output: {
+    filename: '[name].[contenthash].js',
+    path: path.resolve(__dirname, 'dist')
+  }
 }
